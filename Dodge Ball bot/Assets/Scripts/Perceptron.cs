@@ -113,6 +113,10 @@ public class Perceptron : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+		if(Input.GetKeyDown("space"))
+        {
+            InitialiseWeights();
+            ts.Clear();
+        }
 	}
 }
