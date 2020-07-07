@@ -106,8 +106,21 @@ public class Perceptron : MonoBehaviour {
         }
 	}
 
+    GUIStyle guiStyle = new GUIStyle();
+    void OnGUI()
+    {
+        guiStyle.fontSize = 25;
+        guiStyle.normal.textColor = Color.red;
+        GUI.BeginGroup(new Rect(10, 10, 300, 150));
+        GUI.Box(new Rect(0, 0, 140, 140), " Press 1 for red sphere", guiStyle);
+        GUI.Label(new Rect(10, 25, 200, 30), "Press 2 for green sphere", guiStyle);
+        GUI.Label(new Rect(10, 50, 200, 30), "Press 3 for red cube", guiStyle);
+        GUI.Label(new Rect(10, 75, 200, 30), "Press 4 for green cube", guiStyle);
+        GUI.EndGroup();
+    }
 
-	void Start ()
+
+    void Start ()
     {
         InitialiseWeights();
 	}
